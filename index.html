@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>incubator</title>
+    <style>
+        .input {
+            border-color: red;
+            width: 350px;
+            height: 20px;
+            padding: 7px;
+        }
+    </style>
+    <style>
+        .button {
+            background: green;
+            color: white;
+            width: 100px;
+            height: 35px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" class="input">
+    <input type="button" class="button" value="Найти">
+    <script>
+        document.querySelector('.button').addEventListener('click', myClick);
+        function myClick() {
+            let a = document.querySelector('.input').value;
+            if (a === 'google') {
+                alert('Yandex круче. Но это не точно');
+            } else {
+                alert(a);
+            };
+            let b = [
+                { name: 'Max', age: 23 },
+                { name: 'Sofia', age: 17 },
+                { name: 'Sveta', age: 38 },
+            ];
+            alert(b[0].name);
+        }
+        document.querySelector('.button').addEventListener('click', superSum);
+        function superSum(a, b) {
+            a = Number(17);
+            b = Number(4);
+
+            alert(a + b);
+        }
+        function getMax() {
+
+            let array = [];
+            let max = 0;
+
+
+            for (let i = 0; i < 17; i++) {
+                array.push(Math.random());
+            }
+
+            array.forEach((value) => {
+                if (value > max) {
+                    max = value;
+                }
+            })
+
+            console.log(array);
+            console.log('максимальный элемент', max);
+        }
+        function replaceVariables() {
+            let a = 348;
+            let b = 479;
+            console.log('a:', a, 'b:', b);
+
+            let c = a;
+            a = b;
+            b = c;
+
+            console.log('a:', a, 'b:', b);
+        }
+        function findMax(arr) {
+            return Math.max(...arr);
+        }
+        function alertWithTimer() {
+            setTimeout(() => {
+                alert('таймер 3 секунды');
+            }, 3000);
+        }
+
+
+    </script>
+</body>
+
+</html>
